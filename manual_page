@@ -1,0 +1,36 @@
+.TH man 1 "12 December" "0.1" "Simple Shell Manual page"
+
+NAME:
+command interpreter (shell)
+
+DESCRIPTION:
+command intepreter for the system
+
+OVERVIEW:
+The shell is a command that either reads lines from the terminal or the files, interprets them and generally executes other commands.It is the program that is running when the user logs into the system.The shell implements a languauge that has flow control constructs, a macro faclity that provides variety of features in addition to data storage, along with editing capabilities and builtin history.
+
+INVOCATION:
+If no args are present and if the standard input of the shell is connected to a terminal(or if the -i flag is set), and the -c caption is not present the shell is considered an interactive shell.
+
+RETURN:
+0 for success any other number means failure
+
+EXIT STATUS:
+Errors that are detected by the shell will cause the shell to exit with a not zero exit status.If the shell is not an interactive shell the execution of the shell will be aborted, otherwise the shell will return the exit status of the last command executed.
+
+PATH:
+It will look inside all directions in PATH environment variable for executable
+
+OPTIONS:
+simple_shell
+Command options will be typed after the main command followed by a space and a '-' symbol.
+
+EXAMPLE:
+[command] [options]
+$ ls -l
+
+BUGS:
+Setuid shell scripts should be avoided at all costs, as they are a significant security risk.Single spaces required after an argument
+
+AUTHOR:
+Shanyce Jepchumba
