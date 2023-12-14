@@ -1,16 +1,16 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-#include &lt;unistd.h&gt;
-#include &lt;string.h&gt;
-#include &lt;sys/types.h&gt;
-#include &lt;sys/wait.h&gt;
-#include &lt;sys/stat.h&gt;
-#include &lt;limits.h&gt;
-#include &lt;fcntl.h&gt;
-#include &lt;errno.h&gt;
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <sys/stat.h>
+#include <limits.h>
+#include <fcntl.h>
+#include <errno.h>
 
 /* for read/write buffers */
 #define READ_BUF_SIZE 1024
@@ -31,7 +31,7 @@
 #define USE_GETLINE 0
 #define USE_STRTOK 0
 
-#define HIST_FILE &quot;.simple_shell_history&quot;
+#define HIST_FILE ".simple_shell_history"
 #define HIST_MAX 4096
 
 extern char **environ;
@@ -67,7 +67,7 @@ struct liststr *next;
 *@env_changed: on if environ was changed
 *@status: the return status of the last exec&#39;d command
 *@cmd_buf: address of pointer to cmd_buf, on if chaining
-*@cmd_buf_type: CMD_type ||, &amp;&amp;, ;
+*@cmd_buf_type: CMD_type
 *@readfd: the fd from which to read line input
 *@histcount: the history line number count
 */
